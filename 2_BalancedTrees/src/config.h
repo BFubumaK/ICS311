@@ -1,11 +1,11 @@
 ///////////////////////////////////////////////////////////////////////////////
-//  University of Hawaii, College of Engineering
-//  Animal Farm - EE 205 - Spring 2024
+//          University of Hawaii, College of Engineering
+//          2_BinarySearch - ICS 311 - Fall 2024
 //
-/// Global configuration definitions for Animal Farm
+/// BST config
 ///
-/// @file   config.h
-/// @author Mark Nelson <marknels@hawaii.edu>
+/// @author Brian Kim <brianiki@hawaii.edu>
+/// @date   23_Sep_2024
 ///////////////////////////////////////////////////////////////////////////////
 #pragma once
 #include <ios>        // For left & boolalpha
