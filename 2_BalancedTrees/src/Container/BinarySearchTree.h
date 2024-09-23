@@ -1,6 +1,6 @@
 ///////////////////////////////////////////////////////////////////////////////
 //          University of Hawaii, College of Engineering
-//          2_BinarySearch - ICS 311 - Fall 2024
+//          2_BalancedTrees - ICS 311 - Fall 2024
 //
 /// BST implementation for collections.
 /// @file BinarySearchTree.h

@@ -1,15 +1,16 @@
 ///////////////////////////////////////////////////////////////////////////////
 //          University of Hawaii, College of Engineering
-//          ee205_animal_farm - EE 205 - Spr 2024
+//          2_BalancedTrees - ICS 311 - Fall 2024
 //
 /// main for understanding singly linked lists.
 ///
 /// @file main_singly_linked_list.cpp
 /// @version 1.1
 ///
-/// @author Jason Castiglione <jcastig@hawaii.edu>
-/// @date   28_Mar_2024
+/// @author Brian Kim <brianiki@hawaii.edu>
+/// @date   23_Sep_2024
 ///////////////////////////////////////////////////////////////////////////////
+
 
 
 #include "Container/SLLNode.h"

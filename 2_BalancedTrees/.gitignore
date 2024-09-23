@@ -1,6 +1,7 @@
 ###############################################################################
+###############################################################################
 #  University of Hawaii, College of Engineering
-#  Animal Farm - EE 205 - Spring 2024
+#  2_BalancedTrees - ICS 311 - Fall 2024
 #
 ## Ask git to ignore files that match these patterns
 ##
@@ -11,7 +12,7 @@
 ## @see https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
 ##
 ## @file   .gitignore
-## @author Mark Nelson <marknels@hawaii.edu>
+## @author Brian Kim <brianiki@hawaii.edu>
 ###############################################################################
 
 

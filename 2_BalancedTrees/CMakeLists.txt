@@ -1,18 +1,18 @@
 ###############################################################################
 #  University of Hawaii, College of Engineering
-#  Singly Linked Lists - EE 205 - Spring 2024
+#  2_BalancedTrees - ICS 311 - Fall 2024
 #
 ## CMake manages the building of source code.
 ##
 ## @see https://cmake.org/cmake/help/latest/manual/cmake-commands.7.html
 ##
 ## @file   CMakeLists.txt
-## @author Jason Castiglione <jcastig@hawaii.edu>
+## @author Brian Kim <brianiki@hawaii.edu>
 ###############################################################################
 
 cmake_minimum_required(VERSION 3.26)
 
-project(AnimalFarmSorting
+project(2_BalancedTrees
         VERSION 1.0
         DESCRIPTION ""
         LANGUAGES CXX)
