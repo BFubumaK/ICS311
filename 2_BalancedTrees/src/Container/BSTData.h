@@ -21,17 +21,23 @@
 
 class BSTData {
     protected:  /////////////////// Member Variables /////////////////////////////
-        char engPhrase;
-        char olePhrase;
+        std::list < engPhrasePointer* > &engPhrase;
+        std::list < olePhrasePointer* > &olePhrase;
+        std::list < explainPointer* >   &explainPhrase;
 
 
     public:   ///////////////////// Constructors & Destructors /////////////////////
         BSTData() = default;   ///< Default constructor
-        BSTData(char eng, char ole); ///< Creates a data class with both english and hawaiian phrases
+        BSTData( list < engPhrasePointer* > &engPhrase, 
+                 list < olePhrasePointer* > &olePhras0, 
+                 list < explainPointer*   > &explainPhrase ); ///< Creates a data class with both english and hawaiian phrases
+                 
         ~BSTData(); /// Destructor to free data
 
         ////////////////////////// Getters and Setters /////////////////////////////
         char getDataEng();
         char getDataOle();
-        void setData( char eng, char ole);
+        void setData( list < engPhrasePointer* > &engPhrase, 
+                      list < olePhrasePointer* > &olePhras0, 
+                      list < explainPointer*   > &explainPhrase );
 };
