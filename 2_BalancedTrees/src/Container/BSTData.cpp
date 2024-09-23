@@ -14,4 +14,37 @@
 
 using namespace std;
 
+BSTData () = default;   ///< Default constructor
+BSTData ( char eng, char ole ); ///< Creates a data class with both english and hawaiian phrases
 
+BSTData::BSTData( char eng, char ole ) {
+
+    engPhrase = eng;
+    olePhrase = ole;
+
+};
+
+BSTData::~BSTData () {
+
+    reset();
+
+};
+        
+char getDataEng () {
+
+    return engPhrase;
+
+};
+
+char getDataOle () {
+
+    return olePhrase;
+
+};
+
+void BSTData::setData ( char eng, char ole ) {
+
+    engPhrase = eng;
+    olePhrase = ole;
+
+};

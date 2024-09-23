@@ -20,12 +20,18 @@
 #include "../config.h"
 
 class BSTData {
+    protected:  /////////////////// Member Variables /////////////////////////////
+        char engPhrase;
+        char olePhrase;
+
+
     public:   ///////////////////// Constructors & Destructors /////////////////////
         BSTData() = default;   ///< Default constructor
         BSTData(char eng, char ole); ///< Creates a data class with both english and hawaiian phrases
         ~BSTData(); /// Destructor to free data
-        
-        ////////////////////////// Getters and Setters
-        char getData() const;
+
+        ////////////////////////// Getters and Setters /////////////////////////////
+        char getDataEng();
+        char getDataOle();
         void setData( char eng, char ole);
 };
