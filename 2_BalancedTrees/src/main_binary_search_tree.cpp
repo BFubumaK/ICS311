@@ -20,7 +20,7 @@
 using namespace std;
 
 int main() {
-    cout << "Hello, Farm 4!" << "\n";
+    cout << "Hello!" << "\n";
 
     int len = 100;
 
