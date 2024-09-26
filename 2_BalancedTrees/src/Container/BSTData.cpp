@@ -16,11 +16,15 @@ using namespace std;
 
 BSTData () = default;   ///< Default constructor
 
-BSTData::BSTData( list < engPhrasePointer* > &engPhrase, 
-                  list < olePhrasePointer* > &olePhras0, 
-                  list < explainPointer*   > &explainPhrase ) {
+BSTData::BSTData( std::string olelo, 
+                  std::string english, 
+                  std::string explanation, 
+                  std::string color ) {
 
-
+    oleloPhrase       = olelo;
+    englishPhrase     = enlish;
+    phraseExplanation = explanation;
+    nodeColor         = color;
 };
 
 BSTData::~BSTData () {

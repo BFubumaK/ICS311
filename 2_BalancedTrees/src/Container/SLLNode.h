@@ -33,7 +33,7 @@ public:   ///////////////////// Constructors & Destructors /////////////////////
     SLLNode(int data, SLLNode *next); ///< Creates a node that has a next node
     ~SLLNode(); /// Destructor to free data
 
-    void reset()noexcept ;
+    void reset() noexcept ;
     SLLNode* getNext() ;
     int getData() const;
     bool validate() const noexcept ;
