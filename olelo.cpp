@@ -31,7 +31,9 @@ class RedBlackTree {
 private:
    Node* root;
    Node* NIL;
-   
+   std::unordered_map<std::string, std::vector<std::string>> hashMap;  
+   std::unordered_map<std::string, std::vector<std::string>> hashMapE;  
+
    void leftRotate(Node* x){
       Node* y = x->right;
       x->right = y->left;
@@ -176,6 +178,40 @@ public:
       Node* parent = NULL;
       Node* current = root;
 
+      std::istringstream iss(new_node->olelo);
+
+      while(iss){
+         std::string word;
+         iss >> word;
+         if(hashMap.count(word) > 0){
+            hashMap.at(word).push_back(new_node->olelo);
+         }
+
+         else{
+            hashMap[word] = {};
+            hashMap.at(word).push_back(new_node->olelo);
+         }
+         hashMap.at(word).erase(std::unique(hashMap.at(word).begin(), hashMap.at(word).end()), hashMap.at(word).end());
+      }
+
+ 
+      std::istringstream ess(new_node->english);
+ 
+      while(ess){
+         std::string wordE;
+         ess >> wordE;
+         if(hashMapE.count(wordE) > 0){
+            hashMapE.at(wordE).push_back(new_node->english);
+         }
+
+         else{
+            hashMapE[wordE] = {};
+            hashMapE.at(wordE).push_back(new_node->english);
+         }
+
+         hashMapE.at(wordE).erase(std::unique(hashMapE.at(wordE).begin(), hashMapE.at(wordE).end()), hashMapE.at(wordE).end());
+      }
+
       while(current != NIL){
          parent = current;
          if(new_node->data < current->data){
@@ -272,6 +308,19 @@ public:
          std::cout << olelo << " is not a member, so it has no predecessors." << std::endl;
       }
    }
+   void meHua(std::string oleloWord){
+      std::cout << "Sayings containing \"" << oleloWord << "\": " << std::endl;
+      for (auto x: hashMap.at(oleloWord)){
+         std::cout << x << std::endl;
+      }
+   }
+   
+   void withWord(std::string englishWord){
+      std::cout << "English translations containing \"" << englishWord << "\":" << std::endl;
+      for (auto x: hashMapE.at(englishWord)){
+         std::cout << x << std::endl;
+      }   
+   }
 };
 
 int main(){
@@ -299,6 +348,7 @@ int main(){
       }    
    }
 
+   
    for(size_t i = 0; i < olelo_list.size(); i++){
       rt.insert(olelo_list[i].compare(baseString), olelo_list[i], english_list[i], e_explain_list[i]);
    }
@@ -306,13 +356,15 @@ int main(){
    std::string testString = "Malama";   
 
    rt.insert(testString.compare(baseString), testString,  "", "");
-   //rt.inorder();
+   rt.inorder();
    //rt.first();
-   rt.member("Malama");
-   rt.member("Aloha");
-   rt.successor("Malama");
-   rt.predecessor("Malama");
-   rt.successor("Aloha");
-   rt.predecessor("Aloha");
+   //rt.member("Malama");
+   //rt.member("Aloha");
+   //rt.successor("Malama");
+   //rt.predecessor("Malama");
+   //rt.successor("Aloha");
+   //rt.predecessor("Aloha");
+   //rt.meHua("ka");
+   //rt.withWord("the");
    return 0;
-} 
+}
